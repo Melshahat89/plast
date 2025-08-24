@@ -1,113 +1,135 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laraflat') }} | @yield('title')</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    @if(getDir() == 'rtl')
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css">
-    @endif
-    {{ Html::style('css/sweetalert.css') }}
-    {{ Html::style('website/css/custom.css') }}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    {{ Html::style('css/rate.css') }}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>المصرية الدولية بلاست plast</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-    @stack('css')
-    <link href="{{ url('/css/mainselec2.css') }}" rel="stylesheet"/>
-    <link href="{{ url('/css/select2.css') }}" rel="stylesheet"/>
-    <link href="{{ url('/css/bootstrap-datetimepicker.css') }}" rel="stylesheet"/>
-    <!-- if you not use map remove this -->
-        {{ Html::style('css/map.css') }}
-    <!-- if you not use map remove this -->
+    {{ Html::style('css/sweetalert.css') }}
+
+    {{ Html::style('website/css/custom.css') }}
+    <link rel="shortcut icon" href="{{ asset('website/images') }}/logo.png" type="image/png">
+
 </head>
 <body>
-<div id="app">
-    @include(layoutMenu('website'))
-    @include(layoutPushHeader('website'))
-    @stack('before')
-    @include(layoutContent('website'))
-    @stack('after')
-    @include(layoutPushFooter('website'))
-    @include(layoutFooter('website'))
+
+<!-- ✅ القائمة -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="{{ asset('website/images') }}/logo.png" alt="Plast Logo" style="height: 40px; background-color: white; border-radius: 5px;" class="me-2">
+            <span>المصرية الدولية بلاست </span>
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">المنتجات</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">المعرض</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">أخبارنا</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+@include(layoutContent('website'))
+
+
+
+<!-- ✅ فورم الاشتراك -->
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">اشترك في النشرة البريدية</h2>
+        <!-- 🪄 فاصل خط مزخرف -->
+        <div class="text-center my-5">
+            <hr class="w-25 mx-auto border-3 border-black">
+            <i class="bi bi-stars fs-3 text-danger"></i>
+        </div>
+        <form class="row justify-content-center">
+            <div class="col-md-6">
+                <input type="email" class="form-control mb-3" placeholder="أدخل بريدك الإلكتروني" />
+                <button class="btn btn-cart w-100">اشترك الآن</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- ✅ الفوتر -->
+<!-- 🧱 الفوتر -->
+<footer class="bg-dark text-white pt-4 pb-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>عن المصنع</h5>
+                <p>نحن متخصصون في تصنيع العبوات البلاستيكية بجودة عالية وخدمة متميزة للمصانع والمطاعم.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>روابط سريعة</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">الرئيسية</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">منتجاتنا</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">خدماتنا</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>تواصل معنا</h5>
+                <p>📞 0100-123-4567</p>
+                <p>📧 info@factory.com</p>
+                <p>📍 6 أكتوبر، الجيزة، مصر</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col-auto">
+                <a href="https://www.facebook.com/YourPage" target="_blank" class="social-icon facebook" title="فيسبوك">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/YourProfile" target="_blank" class="social-icon instagram" title="انستجرام">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/YourChannel" target="_blank" class="social-icon youtube" title="يوتيوب">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/201001234567" target="_blank" class="social-icon whatsapp" title="واتساب مباشر">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <hr class="bg-light">
+        <div class="container text-center">
+            <p class="mb-1">جميع الحقوق محفوظة &copy; 2025 مصنع العبوات البلاستيكية</p>
+            <p class="mb-0">تم التطوير بواسطة
+                <a href="https://softwep.com" target="_blank" rel="noopener" style="text-decoration: none; color: #d00;">
+                    Softwep
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- ✅ أيقونات التواصل الثابتة -->
+<div class="fixed-contact-icons">
+    <a href="tel:01018115715" class="contact-icon phone" title="اتصل بنا">
+        <i class="fa fa-phone"></i>
+    </a>
+    <a href="https://wa.me/201018115715" class="contact-icon whatsapp" title="واتساب مباشر" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </div>
-<script src="{{ asset('js/app.js') }}"></script>
-{{--{!! Links::track(true) !!}--}}
 {{ Html::script('js/sweetalert.min.js') }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js"></script>
-<script src="{{ url('js/select2.min.js') }}"></script>
-<script src="{{ url('js/moment.js') }}"></script>
-<script src="{{ url('js/bootstrap-datetimepicker.js') }}"></script>
-<script type="application/javascript">
-    $('.select2').select2({
-        theme: "bootstrap",
-        dir: "rtl"
-    });
-    $('.datepicker').datetimepicker({
-        defaultDate: "{{ date('Y/m/d') }}",
-        icons: {
-            time: "fa fa-clock-o",
-            date: "fa fa-calendar",
-            up: "fa fa-arrow-up",
-            down: "fa fa-arrow-down"
-        },
-        format: 'Y/MM/DD'
-    });
-    $('.datepicker2').datetimepicker({
-        defaultDate: "",
-        icons: {
-            time: "fa fa-clock-o",
-            date: "fa fa-calendar",
-            up: "fa fa-arrow-up",
-            down: "fa fa-arrow-down"
-        },
-        format: 'Y/MM/DD'
-    });
-
-    $('.time').datetimepicker({
-        format: 'LT',
-        icons: {
-            time: "fa fa-clock-o",
-            date: "fa fa-calendar",
-            up: "fa fa-arrow-up",
-            down: "fa fa-arrow-down"
-        }
-    });
-    function deleteThisItem(e) {
-        var link = $(e).data('link');
-        swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this Item Again!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Yes, delete it!",
-                closeOnConfirm: false
-            },
-            function () {
-                window.location = link;
-            });
-    }
-    $('#rate').barrating({
-        theme: 'fontawesome-stars',
-        onSelect: function (value, text, event) {
-            $('#rate').closest('form').submit();
-        }
-    });
-</script>
-
-<script src="{{ url('js/fontawesome-iconpicker.min.js') }}"></script>
-<script>
-    $('.icon-field').iconpicker();
-</script>
-@include('sweet::alert')
-@stack('js')
-
+<!-- ✅ سكربتات Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

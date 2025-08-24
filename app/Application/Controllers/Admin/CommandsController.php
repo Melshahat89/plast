@@ -115,7 +115,7 @@ class CommandsController extends AbstractController
         }
         Artisan::call($command, ['name' => $name, '--cols' => $cols]);
         Artisan::call("migrate");
-        Artisan::call('langman:sync');
+//        Artisan::call('langman:sync');
         return true;
     }
 

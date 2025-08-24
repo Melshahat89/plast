@@ -1,84 +1,113 @@
-.footer-basic {
-    padding:40px 0;
-    background-color:#ffffff;
-    color:#4b4c4d;
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f8f9fa;
+}
+.navbar {
+    background-color: #000;
+}
+.navbar-nav .nav-link {
+    color: #fff !important;
+}
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+.product-card, .news-card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.product-card h5 {
+    color: #d00;
+}
+.product-price {
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
+.btn-cart {
+    background-color: #d00;
+    color: #fff;
 }
 footer {
-    display:block;
+    background-color: #212529;
+    color: #fff;
+    padding: 40px 0;
 }
-.footer-basic .social {
-    text-align:center;
-    padding-bottom:25px;
+.social-icons i {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #fff;
 }
-
-.footer-basic .social > a:hover {
-    opacity:0.9;
-}
-
-.footer-basic .social > a {
-    font-size:24px;
-    width:40px;
-    height:40px;
-    line-height:40px;
-    display:inline-block;
-    text-align:center;
-    border-radius:50%;
-    border:1px solid #ccc;
-    margin:0 8px;
-    color:inherit;
-    opacity:0.75;
+.fixed-contact-icons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-a:focus {
-    outline:5px auto -webkit-focus-ring-color;
-    outline-offset:-2px;
+.contact-icon {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    color: #fff;
 }
 
-a:hover, a:focus {
-    color:#158cba;
-    text-decoration:underline;
+.contact-icon.phone {
+    background-color: #25D366; /* أخضر واتساب */
 }
 
-a:active, a:hover {
-    outline:0;
+.contact-icon.whatsapp {
+    background-color: #25D366; /* نفس اللون */
 }
 
-a {
-    color:#158cba;
-    text-decoration:none;
+.contact-icon:hover {
+    transform: scale(1.1);
 }
 
-a {
-    background-color:transparent;
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
-* {
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
+.social-icon:hover {
+    transform: scale(1.1);
 }
 
-.footer-basic .social {
-    text-align:center;
-    padding-bottom:25px;
+.social-icon.facebook { background-color: #1877F2; }
+.social-icon.instagram { background-color: #E1306C; }
+.social-icon.youtube { background-color: #FF0000; }
+.social-icon.whatsapp { background-color: #25D366; }
+
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* خلفية شفافة */
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.footer-basic ul {
-    padding:0;
-    list-style:none;
-    text-align:center;
-    font-size:18px;
-    line-height:1.6;
-    margin-bottom:0;
-}
-.footer-basic li {
-    padding:0 10px;
-}
-
-.footer-basic .copyright {
-    margin-top:15px;
-    text-align:center;
-    font-size:13px;
-    color:#aaa;
-    margin-bottom:0;
+.carousel-caption h5,
+.carousel-caption p {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }

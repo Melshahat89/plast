@@ -345,3 +345,12 @@ Route::get('page/pluck', 'PageController@pluck');
 
 
 
+
+#### slider control
+Route::get('slider' , 'SliderController@index');
+Route::get('slider/item/{id?}' , 'SliderController@show');
+Route::post('slider/item' , 'SliderController@store');
+Route::post('slider/item/{id}' , 'SliderController@update');
+Route::get('slider/{id}/delete' , 'SliderController@destroy');
+Route::get('slider/{id}/view' , 'SliderController@getById');
+Route::get('slider/pluck', 'SliderController@pluck');

@@ -19,3 +19,11 @@ Route::get('page', 'PageApi@index');
 
 
 
+
+
+#slider
+Route::get('slider/getById/{id}', 'SliderApi@getById');
+Route::get('slider/delete/{id}', 'SliderApi@delete');
+Route::post('slider/add', 'SliderApi@add');
+Route::post('slider/update/{id}', 'SliderApi@update');
+Route::get('slider', 'SliderApi@index');

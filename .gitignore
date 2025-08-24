@@ -7,3 +7,13 @@
 /.idea
 Homestead.json
 Homestead.yaml
+
+.env
+*.zip
+*.log
+*.htaccess
+public/uploads/files/*
+error_log
+*.user.ini
+*.jar
+*.env

@@ -14,7 +14,12 @@ function getYouTubeId($url){
 }
 
 function small($image = ''){
-//    return $image == '' ? env('NONE_IMAGE') : imageExist($image) ? url('/'.env('SMALL_IMAGE_PATH').'/'.$image) : large($image);
+    if($image == ''){
+        $image = url(env('NONE_IMAGE'));
+    }else{
+        $image = imageExist($image , 'SMALL_IMAGE_PATH') ?  url('/'.env('SMALL_IMAGE_PATH').'/'.$image) :  url(env('NONE_IMAGE'));
+    }
+    return $image ;
 }
 
 function imageExist($imageName , $env = 'SMALL_IMAGE_PATH'){
@@ -22,5 +27,12 @@ function imageExist($imageName , $env = 'SMALL_IMAGE_PATH'){
 }
 
 function large($image= ''){
-//    return $image == '' ? env('NONE_IMAGE') : imageExist($image , 'UPLOAD_PATH') ?  url('/'.env('UPLOAD_PATH').'/'.$image) :  env('NONE_IMAGE')  ;
+    if($image == ''){
+        $image = url(env('NONE_IMAGE'));
+    }else{
+        $image = imageExist($image , 'UPLOAD_PATH') ?  url('/'.env('UPLOAD_PATH').'/'.$image) :  url(env('NONE_IMAGE'));
+    }
+    return $image ;
+
+    // return $image == '' ? env('NONE_IMAGE') : imageExist($image , 'UPLOAD_PATH') ?  url('/'.env('UPLOAD_PATH').'/'.$image) :  env('NONE_IMAGE')  ;
 }

@@ -7,6 +7,7 @@ namespace App\Application\Controllers\Website;
 use App\Application\Controllers\AbstractController;
 use App\Application\Controllers\Controller;
 use App\Application\Model\Page;
+use App\Application\Model\Slider;
 use App\Application\Model\User;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view(layoutHomePage('website'));
+        $this->data['title'] = 'Home Page';
+        $this->data['sliders'] = Slider::limit(5)->get();
+        return view('website.home', $this->data);
     }
 
 
