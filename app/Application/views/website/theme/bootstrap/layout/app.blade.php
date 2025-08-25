@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>المصرية الدولية بلاست plast</title>
+    <title> @yield('title') </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
@@ -18,6 +18,10 @@
     {{ Html::style('website/css/custom.css') }}
     <link rel="shortcut icon" href="{{ asset('website/images') }}/logo.png" type="image/png">
 
+    <meta name="description" content="@yield('description')">
+    <meta name="keywords" content="@yield('keywords')">
+    @stack('css')
+    @stack('schema')
 </head>
 <body>
 
@@ -31,40 +35,41 @@
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#">الرئيسية</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">المنتجات</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">المعرض</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">أخبارنا</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">اتصل بنا</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url('/')}}">الرئيسية</a></li>
+                <!-- ✅ القائمة المنسدلة داخل الـ ul -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        المنتجات
+                    </a>
+                    <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
+                        @foreach(Categories() as $category)
+                            <li>
+                                <a class="dropdown-item" href="{{ url('category/' . $category->id) }}">
+                                    {{ $category->name }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </li>
+{{--                <li class="nav-item"><a class="nav-link" href="#">المعرض</a></li>--}}
+                <li class="nav-item"><a class="nav-link" href="{{url('news')}}">أخبارنا</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url('contact')}}">اتصل بنا</a></li>
+
+
             </ul>
         </div>
     </div>
 </nav>
 
-
 @include(layoutContent('website'))
 
 
 
-<!-- ✅ فورم الاشتراك -->
-<section class="py-5">
-    <div class="container text-center">
-        <h2 class="mb-4">اشترك في النشرة البريدية</h2>
-        <!-- 🪄 فاصل خط مزخرف -->
-        <div class="text-center my-5">
-            <hr class="w-25 mx-auto border-3 border-black">
-            <i class="bi bi-stars fs-3 text-danger"></i>
-        </div>
-        <form class="row justify-content-center">
-            <div class="col-md-6">
-                <input type="email" class="form-control mb-3" placeholder="أدخل بريدك الإلكتروني" />
-                <button class="btn btn-cart w-100">اشترك الآن</button>
-            </div>
-        </form>
-    </div>
-</section>
+
 
 <!-- ✅ الفوتر -->
 <!-- 🧱 الفوتر -->

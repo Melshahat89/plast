@@ -354,3 +354,28 @@ Route::post('slider/item/{id}' , 'SliderController@update');
 Route::get('slider/{id}/delete' , 'SliderController@destroy');
 Route::get('slider/{id}/view' , 'SliderController@getById');
 Route::get('slider/pluck', 'SliderController@pluck');
+#### products control
+Route::get('products' , 'ProductsController@index');
+Route::get('products/item/{id?}' , 'ProductsController@show');
+Route::post('products/item' , 'ProductsController@store');
+Route::post('products/item/{id}' , 'ProductsController@update');
+Route::get('products/{id}/delete' , 'ProductsController@destroy');
+Route::get('products/{id}/view' , 'ProductsController@getById');
+Route::get('products/pluck', 'ProductsController@pluck');
+#### categories control
+Route::get('categories' , 'CategoriesController@index');
+Route::get('categories/item/{id?}' , 'CategoriesController@show');
+Route::post('categories/item' , 'CategoriesController@store');
+Route::post('categories/item/{id}' , 'CategoriesController@update');
+Route::get('categories/{id}/delete' , 'CategoriesController@destroy');
+Route::get('categories/{id}/view' , 'CategoriesController@getById');
+Route::get('categories/pluck', 'CategoriesController@pluck');
+
+#### news control
+Route::get('news' , 'NewsController@index');
+Route::get('news/item/{id?}' , 'NewsController@show');
+Route::post('news/item' , 'NewsController@store');
+Route::post('news/item/{id}' , 'NewsController@update');
+Route::get('news/{id}/delete' , 'NewsController@destroy');
+Route::get('news/{id}/view' , 'NewsController@getById');
+Route::get('news/pluck', 'NewsController@pluck');

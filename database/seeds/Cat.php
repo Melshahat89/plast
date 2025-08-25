@@ -11,13 +11,13 @@ class Cat extends Seeder
      */
     public function run()
     {
-        $array  =[
-            'title' => '{"en":"Genaral","ar":"العام"}'
-        ];
-        \App\Application\Model\Categorie::create($array);
-        $array  =[
-            'title' => '{"en":"cars","ar":"السيارات"}'
-        ];
-        \App\Application\Model\Categorie::create($array);
+//        $array  =[
+//            'title' => '{"en":"Genaral","ar":"العام"}'
+//        ];
+//        \App\Application\Model\Categorie::create($array);
+//        $array  =[
+//            'title' => '{"en":"cars","ar":"السيارات"}'
+//        ];
+//        \App\Application\Model\Categorie::create($array);
     }
 }

@@ -1,5 +1,10 @@
 @extends(layoutExtend('website'))
 
+@section('title')
+    {{ 'الرئيسية' .'-'.  'المصرية الدولية بلاست' }}
+@endsection
+
+
 @section('content')
     <!-- ✅ سلايدر الصور -->
     <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
@@ -82,126 +87,22 @@
             <div class="row g-4">
                 <!-- 12 منتج -->
                 <!-- يمكنك تكرار هذا البلوك 12 مرة -->
-                <div class="col-md-3 mb-4">
-                    <div class="card product-card shadow-sm">
-                        <img src="https://masterpet.net//upload/files/Products/water-bottles/A133-2.jpg" class="card-img-top" alt="">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">عبوة بلاستيك </h5>
-                            <p class="card-text">السعر:  جنيه</p>
-                            <a href="#" class="btn btn-outline-primary">عرض المنتج</a>
+
+                @isset($products)
+                @foreach($products as $product)
+                        <div class="col-md-3 mb-4">
+                            <div class="card product-card shadow-sm">
+                                <img src="{{large($product->image)}}" class="card-img-top" alt="">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title"> {{$product->name}} </h5>
+                                    <p class="card-text">السعر: {{$product->price}} جنيه</p>
+                                    <a href="{{url('product/'.$product->slug)}}" class="btn btn-outline-primary">عرض المنتج</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card product-card shadow-sm">
-                        <img src="https://www.masterpet.net//upload/files/Products/water-bottles/A-142.jpg" class="card-img-top" alt="">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">عبوة بلاستيك </h5>
-                            <p class="card-text">السعر:  جنيه</p>
-                            <a href="#" class="btn btn-outline-primary">عرض المنتج</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card product-card shadow-sm">
-                        <img src="https://www.masterpet.net//upload/files/Products/water-bottles/A250.jpg" class="card-img-top" alt="">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">عبوة بلاستيك </h5>
-                            <p class="card-text">السعر:  جنيه</p>
-                            <a href="#" class="btn btn-outline-primary">عرض المنتج</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card product-card shadow-sm">
-                        <img src="https://masterpet.net//upload/files/Products/jars/A107.jpg" class="card-img-top" alt="">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">عبوة بلاستيك </h5>
-                            <p class="card-text">السعر:  جنيه</p>
-                            <a href="#" class="btn btn-outline-primary">عرض المنتج</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card product-card shadow-sm">
-                        <img src="https://masterpet.net//upload/files/Products/jars/A041_2.jpg" class="card-img-top" alt="">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">عبوة بلاستيك </h5>
-                            <p class="card-text">السعر:  جنيه</p>
-                            <a href="#" class="btn btn-outline-primary">عرض المنتج</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card product-card shadow-sm">
-                        <img src="https://masterpet.net//upload/files/Products/squeezable/A277.jpg" class="card-img-top" alt="">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">عبوة بلاستيك </h5>
-                            <p class="card-text">السعر:  جنيه</p>
-                            <a href="#" class="btn btn-outline-primary">عرض المنتج</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card product-card shadow-sm">
-                        <img src="https://masterpet.net//upload/files/Products/water-bottles/A133-2.jpg" class="card-img-top" alt="">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">عبوة بلاستيك </h5>
-                            <p class="card-text">السعر:  جنيه</p>
-                            <a href="#" class="btn btn-outline-primary">عرض المنتج</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card product-card shadow-sm">
-                        <img src="https://masterpet.net//upload/files/Products/water-bottles/A133-2.jpg" class="card-img-top" alt="">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">عبوة بلاستيك </h5>
-                            <p class="card-text">السعر:  جنيه</p>
-                            <a href="#" class="btn btn-outline-primary">عرض المنتج</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card product-card shadow-sm">
-                        <img src="https://masterpet.net//upload/files/Products/water-bottles/A133-2.jpg" class="card-img-top" alt="">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">عبوة بلاستيك </h5>
-                            <p class="card-text">السعر:  جنيه</p>
-                            <a href="#" class="btn btn-outline-primary">عرض المنتج</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card product-card shadow-sm">
-                        <img src="https://masterpet.net//upload/files/Products/water-bottles/A133-2.jpg" class="card-img-top" alt="">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">عبوة بلاستيك </h5>
-                            <p class="card-text">السعر:  جنيه</p>
-                            <a href="#" class="btn btn-outline-primary">عرض المنتج</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card product-card shadow-sm">
-                        <img src="https://masterpet.net//upload/files/Products/water-bottles/A133-2.jpg" class="card-img-top" alt="">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">عبوة بلاستيك </h5>
-                            <p class="card-text">السعر:  جنيه</p>
-                            <a href="#" class="btn btn-outline-primary">عرض المنتج</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card product-card shadow-sm">
-                        <img src="https://masterpet.net//upload/files/Products/water-bottles/A133-2.jpg" class="card-img-top" alt="">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">عبوة بلاستيك </h5>
-                            <p class="card-text">السعر:  جنيه</p>
-                            <a href="#" class="btn btn-outline-primary">عرض المنتج</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                @endisset
+
                 <!-- كرر البلوك أعلاه 11 مرة مع تغيير المحتوى -->
             </div>
         </div>
@@ -219,66 +120,27 @@
         <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
 
+
+
+
                 <!-- الشريحة الأولى -->
                 <div class="carousel-item active">
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="bg-white p-3 shadow-sm rounded mb-4">
-                                <img src="{{ asset('website/images') }}/504635657_633569639734006_8644161340789870542_n.jpg" class="w-100 mb-3" alt="خبر 1">
-                                <h5>خبر رقم 1</h5>
-                                <p>تم إطلاق منتج جديد في السوق المصري بجودة عالية وتصميم مبتكر.</p>
-                                <a href="#" class="btn btn-sm btn-primary">اقرأ المزيد</a>
+                        @foreach($news as $new)
+
+                            <div class="col-md-4">
+                                <div class="bg-white p-3 shadow-sm rounded mb-4">
+                                    <img src="{{large($new->image)}}" class="w-100 mb-3" alt="خبر 1">
+                                    <h5>{{$new->title}}</h5>
+                                    <p>{{ \Illuminate\Support\Str::limit($new->description, 100) }}</p>
+                                    <a href="#" class="btn btn-sm btn-primary">اقرأ المزيد</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="bg-white p-3 shadow-sm rounded mb-4">
-                                <img src="{{ asset('website/images') }}/504635657_633569639734006_8644161340789870542_n.jpg" class="w-100 mb-3" alt="خبر 2">
-                                <h5>خبر رقم 2</h5>
-                                <p>تم توقيع اتفاقية جديدة مع مصنع زيوت لتوريد عبوات بلاستيكية.</p>
-                                <a href="#" class="btn btn-sm btn-primary">اقرأ المزيد</a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="bg-white p-3 shadow-sm rounded mb-4">
-                                <img src="{{ asset('website/images') }}/504635657_633569639734006_8644161340789870542_n.jpg" class="w-100 mb-3" alt="خبر 3">
-                                <h5>خبر رقم 3</h5>
-                                <p>افتتاح خط إنتاج جديد لزيادة الطاقة الإنتاجية وتلبية الطلب المحلي.</p>
-                                <a href="#" class="btn btn-sm btn-primary">اقرأ المزيد</a>
-                            </div>
-                        </div>
+                        @endforeach
 
                     </div>
                 </div>
 
-                <!-- الشريحة الثانية -->
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="bg-white p-3 shadow-sm rounded mb-4">
-                                <img src="{{ asset('website/images') }}/504635657_633569639734006_8644161340789870542_n.jpg" class="w-100 mb-3" alt="خبر 4">
-                                <h5>خبر رقم 4</h5>
-                                <p>إطلاق عبوة عصير جديدة بسعة 500 مل بتصميم عملي وجذاب.</p>
-                                <a href="#" class="btn btn-sm btn-primary">اقرأ المزيد</a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="bg-white p-3 shadow-sm rounded mb-4">
-                                <img src="{{ asset('website/images') }}/504635657_633569639734006_8644161340789870542_n.jpg" class="w-100 mb-3" alt="خبر 5">
-                                <h5>خبر رقم 5</h5>
-                                <p>تحديثات على موقع الشركة تشمل قسم الطلبات وخدمة العملاء المباشرة.</p>
-                                <a href="#" class="btn btn-sm btn-primary">اقرأ المزيد</a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="bg-white p-3 shadow-sm rounded mb-4">
-                                <img src="{{ asset('website/images') }}/504635657_633569639734006_8644161340789870542_n.jpg" class="w-100 mb-3" alt="خبر 6">
-                                <h5>خبر رقم 6</h5>
-                                <p>مشاركة الشركة في معرض الصناعات البلاستيكية الدولي بالقاهرة.</p>
-                                <a href="#" class="btn btn-sm btn-primary">اقرأ المزيد</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
@@ -325,6 +187,24 @@
                     <p>طلبت عبوات مخصصة للعصير وتم تنفيذ التصميم بدقة. شكراً لفريقكم على الاحترافية.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ✅ فورم الاشتراك -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">اشترك في النشرة البريدية</h2>
+            <!-- 🪄 فاصل خط مزخرف -->
+            <div class="text-center my-5">
+                <hr class="w-25 mx-auto border-3 border-black">
+                <i class="bi bi-stars fs-3 text-danger"></i>
+            </div>
+            <form class="row justify-content-center">
+                <div class="col-md-6">
+                    <input type="email" class="form-control mb-3" placeholder="أدخل بريدك الإلكتروني" />
+                    <button class="btn btn-cart w-100">اشترك الآن</button>
+                </div>
+            </form>
         </div>
     </section>
 

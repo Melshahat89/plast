@@ -27,3 +27,26 @@ Route::get('slider/delete/{id}', 'SliderApi@delete');
 Route::post('slider/add', 'SliderApi@add');
 Route::post('slider/update/{id}', 'SliderApi@update');
 Route::get('slider', 'SliderApi@index');
+
+#products
+Route::get('products/getById/{id}', 'ProductsApi@getById');
+Route::get('products/delete/{id}', 'ProductsApi@delete');
+Route::post('products/add', 'ProductsApi@add');
+Route::post('products/update/{id}', 'ProductsApi@update');
+Route::get('products', 'ProductsApi@index');
+
+#categories
+Route::get('categories/getById/{id}', 'CategoriesApi@getById');
+Route::get('categories/delete/{id}', 'CategoriesApi@delete');
+Route::post('categories/add', 'CategoriesApi@add');
+Route::post('categories/update/{id}', 'CategoriesApi@update');
+Route::get('categories', 'CategoriesApi@index');
+
+
+
+#news
+Route::get('news/getById/{id}', 'NewsApi@getById');
+Route::get('news/delete/{id}', 'NewsApi@delete');
+Route::post('news/add', 'NewsApi@add');
+Route::post('news/update/{id}', 'NewsApi@update');
+Route::get('news', 'NewsApi@index');

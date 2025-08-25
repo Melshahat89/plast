@@ -1,0 +1,21 @@
+<?php
+	return [
+		'products'=>'المنتجات',
+		'name'=>'اسم المنتج',
+		'description'=>'الوصف',
+		'shortdescription'=>'وصف مختصر',
+		'slug'=>'سلاج',
+		'price'=>'السعر',
+		'image'=>'الصورة',
+		'quantity'=>'الكمية',
+		'futured'=>'مميز',
+		'published'=>'نشر',
+		'bestseller'=>'أفضل المبيعات',
+		'type'=>'النوع',
+		'youtubelink'=>'رابط اليوتيوب',
+		'metadescription'=>'Meta description',
+		'metatitle'=>'Meta title',
+		'seokeywords'=>'Seo keywords',
+		'Yes'=>'نعم',
+		'No'=>'لا',
+	];

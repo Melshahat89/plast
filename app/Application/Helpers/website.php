@@ -13,6 +13,16 @@ function getYouTubeId($url){
     return false;
 }
 
+function extractSeoKeys($arr){
+
+    return str_replace(['[', ']', '"'], '', $arr);
+}
+
+function defaultSeoKeys($title){
+
+    return str_replace(' ', ', ', $title);
+}
+
 function small($image = ''){
     if($image == ''){
         $image = url(env('NONE_IMAGE'));
@@ -35,4 +45,8 @@ function large($image= ''){
     return $image ;
 
     // return $image == '' ? env('NONE_IMAGE') : imageExist($image , 'UPLOAD_PATH') ?  url('/'.env('UPLOAD_PATH').'/'.$image) :  env('NONE_IMAGE')  ;
+}
+
+function Categories(){
+    return \App\Application\Model\Categories::where('published', true)->get();
 }
