@@ -34,13 +34,13 @@
                 <div class="col-lg-4">
                     <div class="contact-info shadow-sm">
                         <h5>📍 العنوان</h5>
-                        <p>المنطقة الصناعية، مدينة 6 أكتوبر، الجيزة، مصر</p>
+                        <p>مدينة الصالحيه الجديده المنقطه الصناعية الثانية , Cairo, Egypt</p>
 
                         <h5>📞 الهاتف</h5>
-                        <p><a href="tel:+20212345678">+20 2 12345678</a></p>
+                        <p><a href="tel:+201001234567">+20 0100-123-4567</a></p>
 
                         <h5>📧 البريد الإلكتروني</h5>
-                        <p><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+                        <p><a href="mailto:info@almasriapetplast.com">info@almasriapetplast.com</a></p>
 
                         <h5>🕒 ساعات العمل</h5>
                         <p>من الأحد إلى الخميس: 9 صباحًا - 5 مساءً</p>
@@ -87,7 +87,7 @@
                 <div class="col-12">
                     <h5 class="mb-3 fw-bold">🗺 موقعنا على الخريطة</h5>
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55322.58757273468!2d30.922995463707185!3d29.931639394790587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458ff6dd9700d3f%3A0x59d06e43065f381c!2z2KfZhNmF2YbYt9mC2Kkg2KfZhNi12YbYp9i52YrYqdiMINmC2LPZhSDYq9in2YYgNiDYo9mD2KrZiNio2LHYjCDZhdit2KfZgdi42Kkg2KfZhNis2YrYstip!5e0!3m2!1sar!2seg!4v1756079606677!5m2!1sar!2seg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6616.932670286189!2d31.944713951391243!3d30.62377602148223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f83e51263cadf3%3A0xb938dedd642d5875!2z2KfZhNmF2YbYt9mC2Kkg2KfZhNi12YbYp9i52YrYqdiMINin2YTYtdin2YTYrdmK2Kkg2KfZhNis2K_Zitiv2KnYjCDYp9mE2LjZh9mK2LEg2KfZhNi12K3Ysdin2YjZiSDYp9mE2LXYp9mE2K3ZitipINin2YTYrNiv2YrYr9ip2Iwg2YXYrdin2YHYuNipINin2YTYtNix2YLZitip!5e0!3m2!1sar!2seg!4v1756160487614!5m2!1sar!2seg" width="100%"  height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 {{--                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>--}}
                     </div>
                 </div>

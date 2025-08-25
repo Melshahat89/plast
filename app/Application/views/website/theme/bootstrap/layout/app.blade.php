@@ -92,13 +92,13 @@
             <div class="col-md-4 mb-3">
                 <h5>تواصل معنا</h5>
                 <p>📞 0100-123-4567</p>
-                <p>📧 info@factory.com</p>
-                <p>📍 6 أكتوبر، الجيزة، مصر</p>
+                <p>📧 info@almasriapetplast.com</p>
+                <p>📍 مدينة الصالحيه الجديده المنقطه الصناعية الثانية , Cairo, Egypt</p>
             </div>
         </div>
         <div class="row justify-content-center mb-3">
             <div class="col-auto">
-                <a href="https://www.facebook.com/YourPage" target="_blank" class="social-icon facebook" title="فيسبوك">
+                <a href="https://www.facebook.com/profile.php?id=100092429254906" target="_blank" class="social-icon facebook" title="فيسبوك">
                     <i class="fab fa-facebook-f"></i>
                 </a>
                 <a href="https://www.instagram.com/YourProfile" target="_blank" class="social-icon instagram" title="انستجرام">
